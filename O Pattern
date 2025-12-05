@@ -1,0 +1,25 @@
+function printO(n) {
+    for (let i = 0; i < n; i++) {
+        let row = "";
+
+        // Top and bottom horizontal lines
+        if (i === 0 || i === n - 1) {
+            for (let j = 0; j < n; j++) row += "* ";
+        } 
+        else {
+            // Left vertical line
+            row += "* ";
+
+            // Middle spaces
+            for (let j = 0; j < n - 2; j++) row += "  ";
+
+            // Right vertical line
+            row += "*";
+        }
+
+        console.log(row);
+    }
+}
+
+// Call the function
+printO(7);
