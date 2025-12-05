@@ -1,0 +1,25 @@
+function printH(n) {
+    for (let i = 0; i < n; i++) {
+        let row = "";
+
+        // Left vertical line
+        row += "*";
+
+        // Middle gap or middle line
+        if (i === Math.floor(n / 2)) {
+            // Middle horizontal line
+            for (let j = 0; j < n - 4; j++) row += "* ";
+        } else {
+            // Space between the two vertical lines
+            for (let j = 0; j < n - 1; j++) row += " ";
+        }
+
+        // Right vertical line
+        row += "*";
+
+        console.log(row);
+    }
+}
+
+// Call the function
+printH(7);
