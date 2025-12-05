@@ -1,0 +1,24 @@
+function printU(n) {
+    for (let i = 0; i < n; i++) {
+        let row = "";
+
+        // Vertical lines (except last row)
+        if (i < n - 1) {
+            row += "* "; // Left vertical
+
+            // Middle spaces
+            for (let j = 0; j < n - 2; j++) row += "  ";
+
+            row += "*"; // Right vertical
+        } 
+        // Bottom horizontal line
+        else {
+            for (let j = 0; j < n; j++) row += "* ";
+        }
+
+        console.log(row);
+    }
+}
+
+// Call the function
+printU(7);
